@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+ <style>
+    body {
+      margin: 0;
+      padding: 0;
+      color: #f4d03f; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+background: linear-gradient(to right, #8e2de2, #4a00e0); }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 images in a row */
+      gap: 15px; /* spacing between images */
+      max-width: 90%; /* keep some margin from sides */
+    }
+    .gallery img {
+      width: 100%;
+      height: 250px; /* medium size */
+      object-fit: cover; /* crop properly */
+      border: 2px solid black;
+      border-radius: 8px;
+    }
+  </style>
+
+<body>
+    <script>
+    // When photo (anchor) is clicked
+    document.querySelectorAll("a[data-product]").forEach(link => {
+      link.addEventListener("click", function() {
+        // fill product number
+        document.getElementById("productNo").value = this.dataset.product;
+      });
+    });
+
+    // Handle form submission
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Booking submitted for product " + document.getElementById("productNo").value);
+    });
+  </script>
+
+
+
+    <table border="4">
+    <section>
+        <div class="gallery">
+        <tr>    
+            <td rowspan="2"> <a href="#formBox" data-product="101"><img src="new choli/choli no.1.jpg" height="300px"></a></td>
+            <td rowspan="2"><img src="new choli/choli no.2.jpg" height="300px"></td>
+            <td rowspan="2"><img src="new choli/choli no.3.jpg" height="300px"></td>
+            <td rowspan="2"><img src="new choli/choli no.4.jpg" height="300px"></td>
+        </tr>
+        <tr></tr>
+        
+        <tr>
+            <td><b><center>choli no.1</center></b></td>
+            <td><b><center>choli no.2</center></b></td>
+            <td><b><center>choli no.3</center></b></td>
+            <td><b><center>choli no.4</center></b></td>
+        </tr>
+        <tr>
+            <td><img src="new choli/choli no.6.jpg" alt="Image 6" height="300px"></td>
+            <td><img src="new choli/choli no.7.jpg" alt="Image 7" height="300px"></td>
+            <td><img src="new choli/choli no.8.jpg" alt="Image 8" height="300px"></td>
+            <td><img src="new choli/choli no.9.jpg" alt="Image 9" height="300px"></td>
+        </tr>
+        <tr>
+            <th><b><center>choli no.6</center></b></td>
+            <th><b><center>choli no.7</center></b></td>
+            <th><b><center>choli no.8</center></b></td>
+            <th><b><center>choli no.9</center></b></td>
+            </tr>
+        <tr>
+            <td><img src="new choli/choli no.10.jpg" alt="Image 10" height="300px"></td>
+            <td><img src="new choli/choli no.12.jpg" alt="Image 12" height="300px"></td>
+            <td><img src="new choli/choli no.14.jpg" alt="Image 14" height="300px"></td>
+            <td><img src="new choli/choli no.15.jpg" alt="Image 15" height="300px"></td>
+        </tr>
+        <tr>
+            <td><b><center>choli no.10</center></b></td>
+            <td><b><center>choli no.12</center></b></td>
+            <td><b><center>choli no.14</center></b></td>
+            <td><b><center>choli no.15</center></b></td>
+        
+        </tr>
+        <tr>
+            <td><img src="new choli/choli no.18.jpg" alt="Image 18" height="300px"></td>
+            <td><img src="new choli/choli no.19.jpg" alt="Image 19" height="300px"></td>
+            <td><img src="new choli/choli no.21.jpg" alt="Image 21" height="300px"></td>
+            <td><img src="new choli/choli no.23.jpg" alt="Image 22" height="300px"></td>
+        </tr>
+        <tr>
+            <td><b><center>choli no.18</center></b></td>
+            <td><b><center>choli no.19</center></b></td>
+            <td><b><center>choli no.21</center></b></td>
+            <td><b><center>choli no.23</center></b></td>
+
+       </tr>
+       <tr>
+        <td><img src="new choli/choli no.24.jpg" alt="Image 23" height="300px"></td>
+        <td><img src="new choli/choli no.29.jpg" alt="Image 24" height="300px"></td>
+        <td><img src="new choli/choli no.31.jpg" alt="Image 29" height="300px"></td>
+        <td><img src="new choli/choli no.33.jpg" alt="Image 31" height="300px"></td>
+       </tr>
+       <tr>
+        <td><b><center>choli no.24</center></b></td>
+        <td><b><center>choli no.29</center></b></td>
+        <td><b><center>choli no.31</center></b></td>
+        <td><b><center>choli no.33</center></b></td>
+       </tr>
+       <tr>
+        <td><img src="new choli/choli no.35.jpg" alt="Image 33" height="300px"></td>
+        <td><img src="new choli/choli no.36.jpg" alt="Image 35" height="300px"></td>
+        <td><img src="new choli/choli no.37.jpg" alt="Image 36" height="300px"></td>
+        <td><img src="new choli/choli no.45.jpg" alt="Image 37" height="300px"></td>
+       </tr>
+       <tr>
+        <td><b><center>choli no.35</center></b></td>
+        <td><b><center>choli no.36</center></b></td>
+        <td><b><center>choli no.37</center></b></td>
+        <td><b><center>choli no.45</center></b></td>
+
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.46.jpg" alt="Image 45" height="300px"></td>
+        <td><img src="new choli/choli no.47.jpg" alt="Image 46" height="300px"></td>
+        <td><img src="new choli/choli no.48.jpg" alt="Image 47" height="300px"></td>
+        <td><img src="new choli/choli no.49.jpg" alt="Image 48" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.46</center></b></td>
+        <td><b><center>choli no.47</center></b></td>
+        <td><b><center>choli no.48</center></b></td>
+        <td><b><center>choli no.49</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.50.jpg" alt="Image 49" height="300px"></td>
+        <td><img src="new choli/choli no.52.jpg" alt="Image 50" height="300px"></td>
+        <td><img src="new choli/choli no.53.jpg" alt="Image 52" height="300px"></td>
+        <td><img src="new choli/choli no.55.jpg" alt="Image 53" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.50</center></b></td>
+        <td><b><center>choli no.52</center></b></td>
+        <td><b><center>choli no.53</center></b></td>
+        <td><b><center>choli no.55</center></b></td>
+
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.57.jpg" alt="Image 55" height="300px"></td>
+        <td><img src="new choli/choli no.58.jpg" alt="Image 57" height="300px"></td>
+        <td><img src="new choli/choli no.60.jpg" alt="Image 58" height="300px"></td>
+        <td><img src="new choli/choli no.61.jpg" alt="Image 60" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.57</center></b></td>
+        <td><b><center>choli no.58</center></b></td>
+        <td><b><center>choli no.60</center></b></td>
+        <td><b><center>choli no.61</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.62.jpg" alt="Image 61" height="300px"></td>
+        <td><img src="new choli/choli no.63.jpg" alt="Image 62" height="300px"></td>
+        <td><img src="new choli/choli no.64.jpg" alt="Image 63" height="300px"></td>
+        <td><img src="new choli/choli no.65.jpg" alt="Image 64" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.62</center></b></td>
+        <td><b><center>choli no.63</center></b></td>
+       <td><b><center>choli no.64</center></b></td>
+       <td><b><center>choli no.65</center></b></td> 
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.66.jpg" alt="Image 65" height="300px"></td>
+        <td><img src="new choli/choli no.70.jpg" alt="Image 66" height="300px"></td>
+        <td><img src="new choli/choli no.71.jpg" alt="Image 70" height="300px"></td>
+        <td><img src="new choli/choli no.72.jpg" alt="Image 71" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.66</center></b></td>
+        <td><b><center>choli no.70</center></b></td>
+        <td><b><center>choli no.71</center></b></td>
+        <td><b><center>choli no.72</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.73.jpg" alt="Image 73" height="300px"></td>
+        <td><img src="new choli/choli no.74.jpg" alt="Image 74" height="300px"></td>
+        <td><img src="new choli/choli no.76.jpg" alt="Image 76" height="300px"></td>
+        <td><img src="new choli/choli no.77.jpg" alt="Image 77" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.73</center></b></td>
+        <td><b><center>choli no.74</center></b></td>
+        <td><b><center>choli no.76</center></b></td>
+        <td><b><center>choli no.77</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.79.jpg" alt="Image 79" height="300px"></td>
+        <td><img src="new choli/choli no.81.jpg" alt="Image 81" height="300px"></td>
+        <td><img src="new choli/choli no.83.jpg" alt="Image 83" height="300px"></td>
+        <td><img src="new choli/choli no.86.jpg" alt="Image 86" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.79</center></b></td>
+        <td><b><center>choli no.81</center></b></td>
+        <td><b><center>choli no.83</center></b></td>
+        <td><b><center>choli no.86</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.87.jpg" alt="Image 87" height="300px"></td>
+        <td><img src="new choli/choli no.88.jpg" alt="Image 88" height="300px"></td>
+        <td><img src="new choli/choli no.90.jpg" alt="Image 90" height="300px"></td>
+        <td><img src="new choli/choli no.91.jpg" alt="Image 91" height="300px"></td>
+    </tr>
+    <tr>
+        
+        <td><b><center>choli no.87</center></b></td>
+        <td><b><center>choli no.88</center></b></td>
+        <td><b><center>choli no.90</center></b></td>
+        <td><b><center>choli no.91</center></b></td>
+        
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.92.jpg" alt="Image 92" height="300px"></td>
+        <td><img src="new choli/choli no.93.jpg" alt="Image 93" height="300px"></td>
+        <td><img src="new choli/choli no.94.jpg" alt="Image 94" height="300px"></td>
+        <td><img src="new choli/choli no.95.jpg" alt="Image 95" height="300px"></td>
+
+    </tr>
+    <tr>
+        <td><b><center>choli no.92</center></b></td>
+        <td><b><center>choli no.93</center></b></td>
+        <td><b><center>choli no.94</center></b></td>
+        <td><b><center>choli no.95</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.96.jpg" alt="Image 96" height="300px"></td>
+        <td><img src="new choli/choli no.98.jpg" alt="Image 97" height="300px"></td>
+        <td><img src="new choli/choli no.100.jpg" alt="Image 100" height="300px"></td>
+        <td><img src="new choli/choli no.101.jpg" alt="Image 101" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.96</center></b></td>
+        <td><b><center>choli no.98</center></b></td>
+        <td><b><center>choli no.100</center></b></td>
+        <td><b><center>choli no.101</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.102.jpg" alt="Image 102" height="300px"></td>
+        <td><img src="new choli/choli no.103.jpg" alt="Image 103" height="300px"></td>
+        <td><img src="new choli/choli no.104.jpg" alt="Image 104" height="300px"></td>
+        <td><img src="new choli/choli no.105.jpg" alt="Image 105" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.102</center></b></td>
+        <td><b><center>choli no.103</center></b></td>
+        <td><b><center>choli no.104</center></b></td>
+        <td><b><center>choli no.105</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.106.jpg" alt="Image 106" height="300px"></td>
+        <td><img src="new choli/choli no.107.jpg" alt="Image 107" height="300px"></td>
+        <td><img src="new choli/choli no.108.jpg" alt="Image 108" height="300px"></td>
+        <td><img src="new choli/choli no.109.jpg" alt="Image 109" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.106</center></b></td>
+        <td><b><center>choli no.107</center></b></td>
+        <td><b><center>choli no.108</center></b></td>
+        <td><b><center>choli no.109</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.110.jpg" alt="Image 110" height="300px"></td>
+        <td><img src="new choli/choli no.112.jpg" alt="Image 112" height="300px"></td>
+        <td><img src="new choli/choli no.115.jpg" alt="Image 115" height="300px"></td>
+        <td><img src="new choli/choli no.116.jpg" alt="Image 116" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.110</center></b></td>
+        <td><b><center>choli no.112</center></b></td>
+        <td><b><center>choli no.115</center></b></td>
+        <td><b><center>choli no.116</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.121.jpg" alt="Image 121" height="300px"></td>
+        <td><img src="new choli/choli no.123.jpg" alt="Image 123" height="300px"></td>
+        <td><img src="new choli/choli no.125.jpg" alt="Image 125" height="300px"></td>
+        <td><img src="new choli/choli no.126.jpg" alt="Image 126" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.121</center></b></td>
+        <td><b><center>choli no.123</center></b></td>
+        <td><b><center>choli no.125</center></b></td>
+        <td><b><center>choli no.126</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.130.jpg" alt="Image 130" height="300px"></td>
+        <td><img src="new choli/choli no.131.jpg" alt="Image 131" height="300px"></td>
+        <td><img src="new choli/choli no.132.jpg" alt="Image 132" height="300px"></td>
+        <td><img src="new choli/choli no.133.jpg" alt="Image 133" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.130</center></b></td>
+        <td><b><center>choli no.131</center></b></td>
+        <td><b><center>choli no.132</center></b></td>
+        <td><b><center>choli no.133</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.134.jpg" alt="Image 134" height="300px"></td>
+        <td><img src="new choli/choli no.135.jpg" alt="Image 135" height="300px"></td>
+        <td><img src="new choli/choli no.136.jpg" alt="Image 136" height="300px"></td>
+        <td><img src="new choli/choli no.137.jpg" alt="Image 137" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.134</center></b></td>
+        <td><b><center>choli no.135</center></b></td>
+        <td><b><center>choli no.136</center></b></td>
+        <td><b><center>choli no.137</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.138.jpg" alt="Image 138" height="300px"></td>
+        <td><img src="new choli/choli no.139.jpg" alt="Image 139" height="300px"></td>
+        <td><img src="new choli/choli no.140.jpg" alt="Image 140" height="300px"></td>
+        <td><img src="new choli/choli no.141.jpg" alt="Image 141" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.138</center></b></td>
+        <td><b><center>choli no.139</center></b></td>
+        <td><b><center>choli no.140</center></b></td>
+        <td><b><center>choli no.141</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.142.jpg" alt="Image 142" height="300px"></td>
+        <td><img src="new choli/choli no.143.jpg" alt="Image 143" height="300px"></td>
+        <td><img src="new choli/choli no.144.jpg" alt="Image 144" height="300px"></td>
+        <td><img src="new choli/choli no.145.jpg" alt="Image 145" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.142</center></b></td>
+        <td><b><center>choli no.143</center></b></td>
+        <td><b><center>choli no.144</center></b></td>
+        <td><b><center>choli no.145</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.146.jpg" alt="Image 146" height="300px"></td>
+        <td><img src="new choli/choli no.147.jpg" alt="Image 147" height="300px"></td>
+        <td><img src="new choli/choli no.148.jpg" alt="Image 148" height="300px"></td>
+        <td><img src="new choli/choli no.149.jpg" alt="Image 149" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.146</center></b></td>
+        <td><b><center>choli no.147</center></b></td>
+        <td><b><center>choli no.148</center></b></td>
+        <td><b><center>choli no.149</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.150.jpg" alt="Image 150" height="300px"></td>
+        <td><img src="new choli/choli no.151.jpg" alt="Image 151" height="300px"></td>
+        <td><img src="new choli/choli no.152.jpg" alt="Image 152" height="300px"></td>
+        <td><img src="new choli/choli no.153.jpg" alt="Image 153" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.150</center></b></td>
+        <td><b><center>choli no.151</center></b></td>
+        <td><b><center>choli no.152</center></b></td>
+        <td><b><center>choli no.153</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.154.jpg" alt="Image 154" height="300px"></td>
+        <td><img src="new choli/choli no.155.jpg" alt="Image 155" height="300px"></td>
+        <td><img src="new choli/choli no.156.jpg" alt="Image 156" height="300px"></td>
+        <td><img src="new choli/choli no.157.jpg" alt="Image 157" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.154</center></b></td>
+        <td><b><center>choli no.155</center></b></td>
+        <td><b><center>choli no.156</center></b></td>
+        <td><b><center>choli no.157</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.158.jpg" alt="Image 158" height="300px"></td>
+        <td><img src="new choli/choli no.159.jpg" alt="Image 159" height="300px"></td>
+        <td><img src="new choli/choli no.160.jpg" alt="Image 160" height="300px"></td>
+        <td><img src="new choli/choli no.161.jpg" alt="Image 161" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.158</center></b></td>
+        <td><b><center>choli no.159</center></b></td>
+        <td><b><center>choli no.160</center></b></td>
+        <td><b><center>choli no.161</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.162.jpg" alt="Image 162" height="300px"></td>
+        <td><img src="new choli/choli no.163.jpg" alt="Image 163" height="300px"></td>
+        <td><img src="new choli/choli no.164.jpg" alt="Image 164" height="300px"></td>
+        <td><img src="new choli/choli no.165.jpg" alt="Image 165" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.162</center></b></td>
+        <td><b><center>choli no.163</center></b></td>
+        <td><b><center>choli no.164</center></b></td>
+        <td><b><center>choli no.165</center></b></td>
+    </tr>
+     <tr>
+        <td><img src="new choli/choli no.166.jpg" alt="Image 166" height="300px"></td>
+        <td><img src="new choli/choli no.167.jpg" alt="Image 167" height="300px"></td>
+        <td><img src="new choli/choli no.168.jpg" alt="Image 168" height="300px"></td>
+        <td><img src="new choli/choli no.170.jpg" alt="Image 170" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.166</center></b></td>
+        <td><b><center>choli no.167</center></b></td>
+        <td><b><center>choli no.168</center></b></td>
+        <td><b><center>choli no.170</center></b></td>
+    </tr>
+     <tr>
+        <td><img src="new choli/choli no.171.jpg" alt="Image 171" height="300px"></td>
+        <td><img src="new choli/choli no.172.jpg" alt="Image 172" height="300px"></td>
+        <td><img src="new choli/choli no.173.jpg" alt="Image 173" height="300px"></td>
+        <td><img src="new choli/choli no.174.jpg" alt="Image 174" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.171</center></b></td>
+        <td><b><center>choli no.172</center></b></td>
+        <td><b><center>choli no.173</center></b></td>
+        <td><b><center>choli no.174</center></b></td>
+    </tr>
+     <tr>
+        <td><img src="new choli/choli no.175.jpg" alt="Image 175" height="300px"></td>
+        <td><img src="new choli/choli no.176.jpg" alt="Image 176" height="300px"></td>
+        <td><img src="new choli/choli no.177.jpg" alt="Image 177" height="300px"></td>
+        <td><img src="new choli/choli no.178.jpg" alt="Image 178" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.175</center></b></td>
+        <td><b><center>choli no.176</center></b></td>
+        <td><b><center>choli no.177</center></b></td>
+        <td><b><center>choli no.178</center></b></td>
+    </tr>
+     <tr>
+        <td><img src="new choli/choli no.179.jpg" alt="Image 179" height="300px"></td>
+        <td><img src="new choli/choli no.180.jpg" alt="Image 180" height="300px"></td>
+        <td><img src="new choli/choli no.181.jpg" alt="Image 181" height="300px"></td>
+        <td><img src="new choli/choli no.182.jpg" alt="Image 182" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.179</center></b></td>
+        <td><b><center>choli no.180</center></b></td>
+        <td><b><center>choli no.181</center></b></td>
+        <td><b><center>choli no.182</center></b></td>
+    </tr>
+     <tr>
+        <td><img src="new choli/choli no.183.jpg" alt="Image 183" height="300px"></td>
+        <td><img src="new choli/choli no.184.jpg" alt="Image 184" height="300px"></td>
+        <td><img src="new choli/choli no.185.jpg" alt="Image 185" height="300px"></td>
+        <td><img src="new choli/choli no.186.jpg" alt="Image 186" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.183</center></b></td>
+        <td><b><center>choli no.184</center></b></td>
+        <td><b><center>choli no.185</center></b></td>
+        <td><b><center>choli no.186</center></b></td>
+    </tr>
+     <tr>
+        <td><img src="new choli/choli no.188.jpg" alt="Image 188" height="300px"></td>
+        <td><img src="new choli/choli no.189.jpg" alt="Image 189" height="300px"></td>
+        <td><img src="new choli/choli no.192.jpg" alt="Image 192" height="300px"></td>
+        <td><img src="new choli/choli no.193.jpg" alt="Image 193" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.188</center></b></td>
+        <td><b><center>choli no.189</center></b></td>
+        <td><b><center>choli no.192</center></b></td>
+        <td><b><center>choli no.193</center></b></td>
+    </tr>
+    <tr>
+        <td><img src="new choli/choli no.194.jpg" alt="Image 194" height="300px"></td>
+    </tr>
+    <tr>
+        <td><b><center>choli no.194</center></b></td>
+    </tr>
+    </section>
+    
+
+</table>
+</body>
+
+</html>

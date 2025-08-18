@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+    form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+        }
+        </style>
+        </head>
+<body>
+   <center> <form action="insert.php" method="POST">
+        <center><h1>signup page</h1></center>
+        <lable for="Firstname">First name</lable>
+        <input type="text" name="firstname" id="firstname" placeholder="enter your firstname"><br><br>
+        <lable for="Middlename">Middle name</lable>
+        <input type="text" name="middlename" id="middlename" placeholder="enter your middlename"><br><br>
+        <label for="lastname">last name</label>
+        <input type="text" name="lastname" id="lastname" placeholder="enter your last name"><br><br>
+        <label for="Mo.No.">Mo.No</label>
+        <input type="number" name="mono" id="mono" placeholder="enter you mobile no."><br><br>   
+        <label for="bdate">Birth date:    </label>
+        <input type="date" name="bdate" id="bdate"><br><br>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="enter email"><br><br>
+        <label for="password">password: </lable>
+        <input type="password " name="password" id="password" placeholder="enter your password"><br><br>
+        <label for="gender">Gender</lable><br>
+        <input type="radio" value="Male" name="gender">Male       
+        <input type="radio" value="Female" name="gender">Female<br>
+        
+       <p align="center"><input type="submit" name="btn" id="btn" value="submit"></p>
+        <p align="right"><input type="button" name="reset" value="reset" ></p>
+        <p align="left"><input type="button" name="cancel" value="cancels"></p>
+       
+
+
+
+        
+
+    </form>
+    </center>
+</body>
+</html>

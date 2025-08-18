@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete form</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        document.getElementById("deleteform").addEventListener("dbtn",function(event)){
+            let name=document.getElementById("name").value.trim();
+            let contactno=document.getElementById("contactno").value.trim();
+            let productno=parseInt(document.getElementById("productno").value.trim());
+
+            if(name===""){
+                alert("Must enter your name");
+                event.preventDefault();
+            }
+            let contactPattern = /^[0-9]{10}$/;
+            if(!contactPattern.test(contactno)){
+                 alert("Please enter a valid 10-digit contact number");
+                 event.preventDefault();
+                 return;
+
+            }
+            if(isNaN(productNo) || productNo < 1 || productNo > 179) {
+            alert("Product No. must be between 1 and 179");
+            event.preventDefault();
+            return;
+            }
+
+        });
+    </script>
+    <center><h1 style="color: brown;">Cancelation form</h1></center>
+    <center><form action="delete_data.php" method="POST" id="deleteform">
+
+        <h3 style="color: red;"><marquee>**please enter details according to booking data**</marquee></h3>
+        <table border="4">
+
+            <tr>
+                <td><label for="Name">Full Name</label></td>
+                <td colspan="2"><input type="text" id="name" name="name" placeholder="enter full name" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td colspan="2"><input type="text" id="address" name="address" placeholder="enter your adress" required></td>
+                
+            </tr>
+            <tr>
+                <td><label for="contact no.">contact no.</label></td>
+                <td colspan="2"><input type="number" id="contactno" name="contactno" placeholder="enter your contact no." required></td>
+            </tr>
+            <tr>
+                <td><label for="Delivery date">Delivery date</label></td>
+                <td colspan="2"><input type="date" id="ddate" name="ddate" required></td>
+            </tr>
+            <tr>
+                <td><label for="Return date">Return date</label>
+                <td colspan="2"><input type="date" id="rdate" name="rdate" required></td>
+            </tr>
+            <tr>
+                <th colspan="3"><p style="color: red;">(if you update product no. so you should must enter updated product no.)</p></th>
+            </tr>
+            <tr>    
+                <td><label for="product">Product No.</label></td>
+                <td colspan="2"><input type="text" name="product" id="product" placeholder="enter product no." required></td>
+            </tr>
+            <tr>
+                <td><label for="destination">Destination</label></td>
+                <td colspan="2"><input type="radio" name="des" id="des" value="surat" required>surat
+                <input type="radio" name="des" id="des" value="out of surat">Out of surat</td>
+            </tr>
+            <tr>
+                <td colspan="3"><h3 style="color: red;">Terms & Conditions for Cancelation</h3></td>
+            </tr>
+            <tr>
+               <center> <td colspan="3"><p style="color: blue;">
+                    1]if you cancel booking,your advance amount is not refundable<br>
+                    2]if you canceled,then your order is not convertible<br>
+
+                    --------------------PRINCESS FASHION-------------------------</center>
+                </p></td>
+            </tr>
+            <tr>
+                <td><center><input type="reset" value="reset"></center> </td>
+                <td><center><input type="submit" name="dbtn" id="dbtn" value="Delete"></center></td>
+                <td><center><input type="reset" value="cancel"></center></td>
+            </tr>
+        </table>
+    </form></center>
+    
+</body>
+</html>

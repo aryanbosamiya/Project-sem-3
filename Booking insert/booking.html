@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking form-PRINCESS FASHION</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            padding: 5px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 5px;
+        }
+
+        .radio-group {
+            margin-top: 10px;
+        }
+
+        .terms {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="formBox">
+    <center><form action="bentry.php" method="POST" id="bookingform">
+
+        <h1>Booking form</h1>
+
+        <table border="2">
+            <tr>
+        <td colspan="3"><center><p style="color:red;">Fill all required field</p></center></td>
+        </tr>
+
+
+        <tr>
+        <td><label for="name">Full Name</label></td>
+        <td colspan="2"><input type="text" id="name" name="name" placeholder="enter your name" required></td><br><br>
+            </tr>
+        
+            <tr>
+        <td><label for="address">Address</label></td>
+        <td colspan="2"><input type="text" id="address" name="address" placeholder="enter address" required></td><br><br>
+                </tr>
+
+        <tr>
+        
+        <td><label for="contact no.">contact no.</label></td>
+        <td colspan="2"><input type="number" id="contactno" name="contactno" placeholder="contact no." required></td><br><br>
+        </tr>
+        
+        <tr>
+        <td><label for="Delivery date">Delivery Date</label></td>
+        <td colspan="2"><input type="date" id="ddate" name="ddate" required></td><br><br>
+            </tr>
+        
+        
+            <tr>
+        <td><label for="Return date">Return Date</label></td>
+        <td colspan="2"><input type="date" id="rdate" name="rdate" required></td><br><br>
+                </tr>
+        
+        <tr>
+        <th colspan="2"><p style="color: red;"><b>*enter number of product whose you want to book</b></p></th><br>
+        </tr>
+        <tr>
+        <td><label for="product no.">product no.</label>
+        <td colspan="2"><input type="text" id="product" name="product" placeholder="product no." readonly></td><br><br>
+            </tr>
+        
+        <tr>
+        <td><lable for="destination">Destination</lable></td>
+        <td colspan="2"><input type="radio" value="surat" name="destination" id="destination" required>surat<br>
+        <input type="radio" value="out of surat" name="destination" id="destination">Out of surat</td>
+        </tr>
+    </center>
+    <br><br><br><br>
+
+        <tr>
+        <th colspan="3"><h6 align="left" style="color: red;">*Terms&conditions</h6></th>
+        </tr>
+    <tr>
+        <td colspan="3"><p align="left">Thank You, PRINCESS FASHION  <br>                                                                                                                                      
+            1) ઓર્ડર બુકિંગ થયા પછી કોઈપણ વસ્તુમાં ચેન્જ કે કેન્સલ થશે નહીં અને બિલ ની રકમ પરત મળશે નહીં.<br>
+            2) ડીલવરી લેતી વખતે બાકી રહેતી રકમ અને ડિપોઝિટ આપવાની રહેશે.<br>
+            3) કોઈપણ ઓર્ડર ના બુકિંગ સાથે 50% રકમ જમા કરાવવાની રહેશે<br>
+            4) ચોલીના બ્લાઉઝમાં ફીટીંગ માટે ફરજિયાત હાથ સિલાઈ કરવાની રહેશે, મશીન સિલાઈ હશે તો ૫૦૦ ચાર્જ લેવામાં આવશે<br>
+            5) કોઈપણ વસ્તુમાં પીઠીના કે અન્ય ડાઘ પડશે તો તેની જવાબદારી ગ્રાહકની રહેશે. વોશિંગમાં ડાઘ નીકળે ત્યાં સુધી ડિપોઝિટ જમા રહેશે<br>
+            6) ભાડેથી લઈ ગયેલ ઓર્ડર આપેલ તારીખ છે કે સમય નહીં પહોંચે તો બે ગણું ભાડું લેવામાં આવશે<br>
+            8) ભાડા ની બધી જ વસ્તુઓ રિટર્ન કરવાની રહેશે.<br>
+            9) ડીલવરી લેતી વખતે સામાન બરાબર ચેક કરીને લઈ જવો.(ઘરે જઈને સામાન ફરી પહેરીને બરાબર ચેક કરવો અને કોઈ ભૂલ દેખાય તો 4 કલાક માં જાણ કરવી પછી શો-રૂમની કોઈ જવાબદારી રહેશે નહીં)<br>
+            10) વાઈટ ચોલી   માં થોડી ઘણી દાગી આવશે તે ચલાવવી પડશે.<br>
+            12) તમારા ઓર્ડર પહેલા કોઈ પીસ ઓર્ડરમાં લઈ ગયેલ હોય ને તે પીસ ડેમેજ રિટર્ન આવે તો તેવા સમયે તમારે બીજો પસંદ કરવો પડશે.<br>
+            13) શો-રૂમ સમય સવારે ૧૦:૦૦ થી સાંજે 8 :૦૦ સુધીનો રહેશે.<br>
+            14) ઉપરના બધા જ નિયમો અને સૂચનો અમે વાંચ્યા છે અને અમને મંજુર છે, અને તેનું સંપૂર્ણ પણે પાલન કરવા અમે બંધાયેલા છીએ. ડીલીવરી સવારે 11.30 પછીથી ૮:૦૦ સાંજે વાગ્યા સુધીમાં લઈ જવી.<br>
+        </p>
+        </td>
+        </tr>
+
+        <tr>
+            <td colspan="3"><input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I agree to the Terms and Conditions</label></td><br><br>
+        </tr>
+        <tr>
+
+<div style="display: flex; justify-content: space-between; padding: 10px 20px;">
+<td><input type="reset" id="reset" name="reset" value="reset"></td>
+<td><input type="submit" id="submit" name="submit" value="submit"></td>
+<td><input type="reset" value="cancel"></td>
+
+</div>
+        </tr>
+
+    </table>    
+    </form>
+    </div>
+    
+</body>
+</html>
