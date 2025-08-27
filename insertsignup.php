@@ -9,13 +9,13 @@ if(isset($_POST['btn']))
     $bdate=$_POST['bdate'];
     $email=$_POST['email'];
     $password=$_POST['password'];
-    print("$firstname");
-    print("$middlename");
-    print("$lastname");
-    print("$mono");
-    print("$bdate");
-    print("$email");
-    print("$password");
+    print("Firstname:$firstname");
+    print("middlename:$middlename");
+    print("lastname:$lastname");
+    print("Mo.No.:$mono");
+    print("Birth Date:$bdate");
+    print("Email:$email");
+    print("Password:$password");
     $query = "INSERT INTO signupdetail (firstname, middlename, lastname, `Mo.No.`, Birthdate, Email, password)
               VALUES ('$firstname', '$middlename', '$lastname', '$mono', '$bdate', '$email', '$password')";
     
@@ -23,7 +23,7 @@ if(isset($_POST['btn']))
     $res=mysqli_query($conn,$query);
     if($res)
     {
-        print("data inserted");
+        print("your signup data inserted.");
     }
     else{
         print("not innserted");
