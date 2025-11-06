@@ -171,18 +171,18 @@
        <center><p style="color:red;">*if you have no any account then you should to signup first</p></center>
        <center><a href="signup.html">click here to create new account</a><br><br><br></center>
 
-        <form>
+        <form method="POST" action="signin.php">
           <center>  <table border="5">
             <tr>
             <td><center><label for="email">E-mail</label></center></td>
-            <td><center><input type="email" name="email"><br><br></center></td>
+            <td><center><input type="email" id="email" name="email"><br><br></center></td>
             </tr>
             <tr>
             <td><center><label for="password">password:</label> </center></td>
-            <td><center><input type="password" name="password"><br><br></center></td>
+            <td><center><input type="password" id="password" name="password"><br><br></center></td>
             </tr>
             <tr>
-            <td colspan="2"><center><input type="button" name="Signin" value="Signin"></center></td>
+            <td colspan="2"><center><input type="submit" name="sbtn" value="Signin"></center></td>
             </tr>
             </table></center>
         </form>
